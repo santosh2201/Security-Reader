@@ -1,0 +1,35 @@
+@(user: String)
+<div class="container">
+  <div class="row">
+    <ul class="nav nav-tabs">
+      <li class="active"><a href="#calendar" data-toggle="tab">Calendar</a></li>
+      <script>
+      	cacheAjaxCall();
+      </script>
+      <li> <a href="#list" data-toggle="tab">List</a></li>
+      @if(user=="admin"||user=="moderator"){
+        <li> <a href="#stat" data-toggle="tab">Stat</a></li>
+        }
+    </ul>
+  </div>
+  <div style="margin-top:15px;" id='content' class="tab-content">
+      <div class="span12 tab-pane active" id="calendar">
+      </div>
+    <div class="tab-pane" id="list">
+      
+    </div>
+    @if(user=="admin"||user=="moderator"){
+    <div class="tab-pane" id="stat">
+      	<script>
+      		getInOutStat();
+      	</script>
+    </div>
+    }else{
+    <script>
+      		f("@user");
+      		
+      	</script>
+    }
+  </div>
+</div>
+<!-- /container -->

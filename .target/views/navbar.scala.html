@@ -1,0 +1,19 @@
+@(session: String)
+
+
+ <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+        <a href="#" class="brand">Security Reader</a>
+        <div class="nav-collapse">
+            <ul class="nav" style="float:right;">
+            	@if(session=="none"){
+              	<a type="button" class="btn btn-info"data-toggle="modal" id="login" href="#signinModal">Login</a> 
+              	}else{
+              	<a type="button" class="btn btn-info"  id="logout" onClick="signout()" >Log out </a>   
+              	} 
+            </ul>
+          </div>  	
+        </div>
+      </div>
+    </div>

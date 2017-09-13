@@ -1,0 +1,33 @@
+@(title: String,session:String)(content: Html)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>@title</title>
+	    <style>
+	      body {
+	        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+	      }
+	    </style>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/bootstrap.css")">
+        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <script type="text/javascript" src="@routes.Application.javascriptRoutes"></script>
+		<script type="text/javascript" src="@routes.Assets.at("javascripts/jquery.js")" ></script>
+        <script type="text/javascript" src="@routes.Assets.at("javascripts/bootstrap.js")" ></script>
+    	<script type="text/javascript" src="@routes.Assets.at("javascripts/bootstrap.calendar.js")" ></script>
+    	<link rel="stylesheet" href="@routes.Assets.at("stylesheets/bootstrap.calendar.css")" type="text/css" />	 
+    	 <script src="@routes.Assets.at("javascripts/editIndex.js")"></script>
+    	
+      
+    
+    </head>
+    
+    
+    <body>
+   @navbar(session)
+    
+        @content
+	@sign.signIn("")        
+        
+    </body>
+</html>

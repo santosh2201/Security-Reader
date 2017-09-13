@@ -1,0 +1,30 @@
+@(message: String)
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Signup</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="@routes.Assets.at("stylesheets/sign.css")" rel="stylesheet" media="screen">
+	  <script src="@routes.Assets.at("javascripts/validatr.min.js")"></script>
+    <link href="@routes.Assets.at("stylesheets/bootstrap.min.css")" rel="stylesheet" media="screen">
+    <script src="@routes.Assets.at("javascripts/jquery.js")"></script>
+  
+    <script src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+  </head>
+  <body>
+
+    
+    <div class="container">
+
+      <form class="form-signin">
+        <h2 class="form-signin-heading">Registration</h2>
+        <input type="email" class="input-block-level" placeholder="Email address">
+        <input type="password" class="input-block-level" placeholder="Password">
+        <input type="password" class="input-block-level" placeholder="Confirm Password">
+        <button class="btn btn-large btn-primary" type="submit">Sign in</button>
+      </form>
+
+    </div>
+  </body>
+</html>
