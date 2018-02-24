@@ -2,3 +2,5 @@ This is your new Play 2.1 application
 =====================================
 
 This file will be packaged with your application, when using `play dist`.
+
+This scala application is built to use as backend for [Security Reader android application](https://github.com/santosh2201/Security-Reader-Android)
